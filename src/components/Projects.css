@@ -1,0 +1,157 @@
+.projects-section {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.projects-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.projects-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3b82f6;
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111827;
+  transition: color 0.3s;
+}
+
+.project-card:hover .project-title {
+  color: #2563eb;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: #c7d2fe;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.project-links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.project-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #1d4ed8;
+}
+
+.project-links a:hover::after {
+  width: 100%;
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

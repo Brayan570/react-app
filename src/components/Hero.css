@@ -1,0 +1,117 @@
+.hero-section {
+  padding: 5rem 1.5rem;
+  background: radial-gradient(circle at top, #f3f4f6 0%, #e5e7eb 100%); /* fondo con gradiente radial */
+  text-align: center;
+  animation: fadeInZoom 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white; /* Blanco normal */
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero-title:hover {
+  transform: scale(1.03);
+}
+
+.hero-title::after {
+  content: '';
+  width: 50%;
+  height: 4px;
+  background-color: #3b82f6; /* azul */
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.hero-title:hover::after {
+  width: 70%;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #4b5563;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hero-subtitle:hover {
+  color: #374151;
+  transform: translateY(-3px);
+}
+
+.hero-section {
+  padding: 6rem 1.5rem;
+  text-align: center;
+  background-image: url('/hero-bg.png'); /* ruta relativa desde public */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* oscurece el fondo */
+  z-index: -1;
+  backdrop-filter: blur(2px);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  z-index: 2;
+  position: relative;
+}
+
+
+/* Animación de entrada */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+}
