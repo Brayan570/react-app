@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Modelo de Pagina para Clinica Dental",
     description:
-      "Diseñe un modelo de paagina web para una clinica dental, con un diseño atractivo y responsivoo.",
+      "Diseñe un modelo de pagina web para una clinica dental, con un diseño atractivo y responsivoo.",
     image: "https://iili.io/34xhu1V.jpg", // Puedes reemplazar esto con una imagen real
     github: "https://github.com/Brayan570/clinica_dental",
     demo: "https://brayan570.github.io/clinica_dental/",
