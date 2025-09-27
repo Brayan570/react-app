@@ -5,7 +5,7 @@ import "./Projects.css"; // ← importar el archivo CSS
 export default function Projects() {
   return (
     <section id="proyectos" className="projects-section">
-      <h3 className="projects-title">Mis Proyectos</h3>
+      <h3 className="projects-title">Nuestros Proyectos</h3>
       <div className="projects-grid">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
