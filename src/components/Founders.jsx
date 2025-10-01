@@ -6,13 +6,13 @@ export default function Founders() {
     {
       name: "Kelly Contreras",
       role: "CEO & Fundador",
-      img: "/images/yesid.jpg", // agrega la ruta de la imagen en public/images
+      img: "/images/kelly.jpg", // agrega la ruta de la imagen en public/images
       description: "Apasionado por la tecnología y el desarrollo de soluciones innovadoras."
     },
     {
       name: "Brayan Gómez",
       role: "CEO & Cofundador",
-      img: "/images/brayan.jpg",
+      img: "/images/yesid.jpg",
       description: "Especialista en software, siempre en busca de mejorar la experiencia digital."
     }
   ];
