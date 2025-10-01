@@ -1,18 +1,22 @@
 import React from "react";
 import "./Founders.css";
 
+// Importamos las imágenes desde src/assets
+import kellyImg from "../assets/kelly.jpg";
+import yesidImg from "../assets/yesid.jpg";
+
 export default function Founders() {
   const founders = [
     {
       name: "Kelly Contreras",
       role: "CEO & Fundador",
-      img: "/images/kelly.jpg", // agrega la ruta de la imagen en public/images
+      img: kellyImg,
       description: "Apasionado por la tecnología y el desarrollo de soluciones innovadoras."
     },
     {
       name: "Brayan Gómez",
       role: "CEO & Cofundador",
-      img: "/images/yesid.jpg",
+      img: yesidImg,
       description: "Especialista en software, siempre en busca de mejorar la experiencia digital."
     }
   ];
