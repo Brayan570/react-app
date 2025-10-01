@@ -1,21 +1,58 @@
 .hero-section {
-  padding: 5rem 1.5rem;
-  background: radial-gradient(circle at top, #f3f4f6 0%, #e5e7eb 100%); /* fondo con gradiente radial */
+  padding: 0;
   text-align: center;
-  animation: fadeInZoom 1s ease-in-out;
+  background-image: url('/images/hero.jpg'); /* coloca tu imagen en public/images */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
   position: relative;
+  z-index: 1;
+  min-height: 100vh; /* pantalla completa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInZoom 1s ease-in-out;
   overflow: hidden;
 }
 
+/* Overlay con gradiente animado */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(0, 0, 0, 0.6), rgba(59, 130, 246, 0.4), rgba(0, 0, 0, 0.6));
+  background-size: 300% 300%;
+  animation: gradientShift 12s ease infinite;
+  z-index: -1;
+}
+
+/* Animación del gradiente */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Título */
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
-  color: white; /* Blanco normal */
+  color: #ffffff;
   margin-bottom: 1rem;
   letter-spacing: -0.5px;
   position: relative;
   display: inline-block;
   transition: transform 0.3s ease;
+  z-index: 2;
 }
 
 .hero-title:hover {
@@ -26,7 +63,7 @@
   content: '';
   width: 50%;
   height: 4px;
-  background-color: #3b82f6; /* azul */
+  background-color: #3b82f6;
   display: block;
   margin: 0.5rem auto 0;
   border-radius: 4px;
@@ -37,61 +74,33 @@
   width: 70%;
 }
 
+/* Subtítulo */
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #4b5563;
+  color: #e5e7eb;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   line-height: 1.6;
   transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 2;
+  position: relative;
 }
 
 .hero-subtitle:hover {
-  color: #374151;
+  color: #ffffff;
   transform: translateY(-3px);
 }
 
-.hero-section {
-  padding: 6rem 1.5rem;
-  text-align: center;
-  background-image: url('/hero-bg.png'); /* ruta relativa desde public */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  position: relative;
-  z-index: 1;
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* oscurece el fondo */
-  z-index: -1;
-  backdrop-filter: blur(2px);
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+/* Descripción */
+.hero-description {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
   z-index: 2;
   position: relative;
 }
-
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: #e5e7eb;
-  z-index: 2;
-  position: relative;
-}
-
 
 /* Animación de entrada */
 @keyframes fadeInZoom {
@@ -113,5 +122,9 @@
 
   .hero-subtitle {
     font-size: 1.125rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
   }
 }
