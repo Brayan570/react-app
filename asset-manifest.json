@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.8a9b7ac4.chunk.css",
-    "main.js": "/react-app/static/js/main.3051c0ce.chunk.js",
-    "main.js.map": "/react-app/static/js/main.3051c0ce.chunk.js.map",
-    "runtime~main.js": "/react-app/static/js/runtime~main.90386036.js",
-    "runtime~main.js.map": "/react-app/static/js/runtime~main.90386036.js.map",
-    "static/js/2.4519393a.chunk.js": "/react-app/static/js/2.4519393a.chunk.js",
-    "static/js/2.4519393a.chunk.js.map": "/react-app/static/js/2.4519393a.chunk.js.map",
-    "static/js/3.7426b29a.chunk.js": "/react-app/static/js/3.7426b29a.chunk.js",
-    "static/js/3.7426b29a.chunk.js.map": "/react-app/static/js/3.7426b29a.chunk.js.map",
+    "main.css": "/react-app/static/css/main.d4c05e9a.chunk.css",
+    "main.js": "/react-app/static/js/main.d6c94cbc.chunk.js",
+    "main.js.map": "/react-app/static/js/main.d6c94cbc.chunk.js.map",
+    "runtime~main.js": "/react-app/static/js/runtime~main.236c6f5c.js",
+    "runtime~main.js.map": "/react-app/static/js/runtime~main.236c6f5c.js.map",
+    "static/js/2.98dd9f15.chunk.js": "/react-app/static/js/2.98dd9f15.chunk.js",
+    "static/js/2.98dd9f15.chunk.js.map": "/react-app/static/js/2.98dd9f15.chunk.js.map",
+    "static/js/3.730e5367.chunk.js": "/react-app/static/js/3.730e5367.chunk.js",
+    "static/js/3.730e5367.chunk.js.map": "/react-app/static/js/3.730e5367.chunk.js.map",
     "index.html": "/react-app/index.html",
-    "precache-manifest.bb4a8e8de0a6d4fb41240dbaee88d0b1.js": "/react-app/precache-manifest.bb4a8e8de0a6d4fb41240dbaee88d0b1.js",
+    "precache-manifest.a82a1d6dc2348b5c10746b1dc43dfaee.js": "/react-app/precache-manifest.a82a1d6dc2348b5c10746b1dc43dfaee.js",
     "service-worker.js": "/react-app/service-worker.js",
-    "static/css/main.8a9b7ac4.chunk.css.map": "/react-app/static/css/main.8a9b7ac4.chunk.css.map"
+    "static/css/main.d4c05e9a.chunk.css.map": "/react-app/static/css/main.d4c05e9a.chunk.css.map",
+    "static/media/hero.jpg": "/react-app/static/media/hero.666c28f1.jpg",
+    "static/media/kelly.jpg": "/react-app/static/media/kelly.b0d084b3.jpg",
+    "static/media/yesid.jpg": "/react-app/static/media/yesid.cba1634f.jpg"
   }
 }
