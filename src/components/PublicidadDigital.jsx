@@ -69,7 +69,7 @@ export default function PublicidadDigital() {
   ];
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "573123456789"; // Reemplaza con tu número real (código país + número sin +)
+    const phoneNumber = "573005957222"; // Reemplaza con tu número real (código país + número sin +)
     const message = encodeURIComponent(
       "¡Hola! Me interesa comenzar una campaña de publicidad digital. ¿Podrían darme más información?"
     );
