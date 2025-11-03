@@ -11,14 +11,16 @@ export default function Founders() {
       name: "Kelly Contreras",
       role: "CEO & Fundador",
       img: kellyImg,
-      description: "Apasionado por la tecnología y el desarrollo de soluciones innovadoras."
+      description:
+        "Especialista en desarrollo Backend apasionada por la tecnología y el desarrollo de soluciones innovadoras.",
     },
     {
       name: "Brayan Gómez",
       role: "CEO & Cofundador",
       img: yesidImg,
-      description: "Especialista en software, siempre en busca de mejorar la experiencia digital."
-    }
+      description:
+        "Especialista en desarrollo Frontend, siempre en busca de mejorar la experiencia digital.",
+    },
   ];
 
   return (
