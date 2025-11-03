@@ -1,82 +1,294 @@
-.publicidad-section {
-  background: #f9fafb;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.publicidad-section h2 {
-  font-size: 2.2rem;
-  color: #1f2937;
-  font-weight: 700;
-  margin-bottom: 50px;
-  letter-spacing: 0.5px;
-  position: relative;
-}
-
-.publicidad-section h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #00f2ea, #ff0050);
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-.publicidad-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-}
-
-.publicidad-logos img {
-  width: 130px;
-  height: 130px;
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
-}
-
-.publicidad-logos img:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.2));
-}
-
-@media (max-width: 600px) {
-  .publicidad-section h2 {
-    font-size: 1.8rem;
-  }
-
-  .publicidad-logos {
-    gap: 30px;
-  }
-
-  .publicidad-logos img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
 /* src/components/PublicidadDigital.css */
-section img {
-  width: 100px;
-  height: auto;
+
+/* Section Styles */
+.publicidad-section {
+  padding: 80px 24px;
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+}
+
+.publicidad-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.publicidad-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.publicidad-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.title-underline {
+  width: 96px;
+  height: 4px;
+  background: linear-gradient(to right, #06b6d4, #3b82f6, #9333ea);
+  margin: 0 auto 24px;
+  border-radius: 9999px;
+}
+
+.publicidad-subtitle {
+  color: #4b5563;
+  font-size: 1.125rem;
+  max-width: 672px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* Grid Layout */
+.publicidad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+/* Platform Card */
+.platform-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+  padding: 32px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.platform-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Background Effect */
+.card-bg-effect {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.platform-card:hover .card-bg-effect {
+  opacity: 1;
+}
+
+.tiktok-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 242, 234, 0.1),
+    rgba(255, 0, 80, 0.1)
+  );
+}
+
+.meta-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1),
+    rgba(6, 182, 212, 0.1)
+  );
+}
+
+.whatsapp-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.1),
+    rgba(21, 128, 61, 0.1)
+  );
+}
+
+/* Card Content */
+.card-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Logo Container */
+.logo-container {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.platform-card:hover .logo-container {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.tiktok-gradient {
+  background: linear-gradient(135deg, #00f2ea, #ff0050);
+}
+
+.meta-gradient {
+  background: linear-gradient(135deg, #0088ff, #00c6ff);
+}
+
+.whatsapp-gradient {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.platform-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-section img:hover {
-  transform: scale(1.1);
+.platform-card:hover .platform-logo {
+  transform: scale(1.05);
 }
 
+/* Platform Name */
+.platform-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover .platform-name {
+  background: linear-gradient(to right, #06b6d4, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Platform Description */
+.platform-description {
+  color: #4b5563;
+  line-height: 1.625;
+  margin-bottom: 24px;
+}
+
+/* CTA Link */
+.platform-cta {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #06b6d4, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.3s ease;
+}
+
+.platform-card:hover .platform-cta {
+  opacity: 1;
+  transform: translateX(8px);
+}
+
+.cta-text {
+  font-weight: 600;
+}
+
+.cta-arrow {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  stroke: #06b6d4;
+}
+
+/* Animated Border */
+.card-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.platform-card:hover .card-border {
+  opacity: 1;
+}
+
+.border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0.2;
+  filter: blur(24px);
+}
+
+/* CTA Button Section */
+.publicidad-cta {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.cta-button {
+  padding: 16px 32px;
+  background: linear-gradient(to right, #06b6d4, #3b82f6, #9333ea);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
 @media (min-width: 768px) {
-  section img {
-    width: 130px;
+  .publicidad-title {
+    font-size: 3rem;
+  }
+
+  .publicidad-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
-  section img {
-    width: 150px;
+@media (max-width: 767px) {
+  .publicidad-section {
+    padding: 60px 16px;
+  }
+
+  .publicidad-title {
+    font-size: 2rem;
+  }
+
+  .publicidad-header {
+    margin-bottom: 48px;
+  }
+
+  .publicidad-grid {
+    gap: 24px;
+  }
+
+  .platform-card {
+    padding: 24px;
+  }
+
+  .icon-container {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 480px) {
+  .publicidad-title {
+    font-size: 1.75rem;
+  }
+
+  .publicidad-subtitle {
+    font-size: 1rem;
   }
 }
