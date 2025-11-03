@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import PublicidadDigital from "./components/PublicidadDigital"; // 👈 Importa tu nuevo componente
+import Desarrolloweb from "./components/Desarrolloweb";
 import "./index.css"; // 👈 No hace falta asignarlo a una variable
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Projects />
       <About />
       <PublicidadDigital /> {/* 👈 Aquí aparece tu sección */}
+      <Desarrolloweb />
       <Contact />
     </div>
   );
