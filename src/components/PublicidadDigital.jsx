@@ -2,7 +2,7 @@
 import React from "react";
 import tiktokLogo from "../assets/tiktok.png";
 import metaLogo from "../assets/meta.png";
-import whatsappLogo from "../assets/WhatsApp rct.png";
+import whatsappLogo from "../assets/whatsapp.png";
 import "./PublicidadDigital.css";
 
 export default function PublicidadDigital() {
