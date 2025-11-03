@@ -1,4 +1,4 @@
-/* src/components/ServiciosDestacados.css */
+/* src/components/Desarrolloweb.css */
 
 /* Section Styles */
 .servicios-destacados-section {
@@ -66,6 +66,11 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
+.servicio-card.expanded {
+  transform: translateY(-8px);
+  padding-bottom: 60px;
+}
+
 /* Color Variants */
 .servicio-card.optimizacion:hover {
   border-color: #10b981;
@@ -80,6 +85,21 @@
 .servicio-card.soporte:hover {
   border-color: #8b5cf6;
   box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+}
+
+.servicio-card.expanded.optimizacion {
+  border-color: #10b981;
+  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.25);
+}
+
+.servicio-card.expanded.marketing {
+  border-color: #3b82f6;
+  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+}
+
+.servicio-card.expanded.soporte {
+  border-color: #8b5cf6;
+  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.25);
 }
 
 /* Image Container */
@@ -155,6 +175,135 @@
   font-size: 1rem;
 }
 
+/* Detalles Expandidos */
+.servicio-detalles {
+  margin: 32px 0;
+  padding: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 250, 251, 0.8),
+    rgba(243, 244, 246, 0.8)
+  );
+  border-radius: 16px;
+  text-align: left;
+  animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detalle-section {
+  margin-bottom: 24px;
+}
+
+.detalle-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.detalle-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.detalle-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.servicio-card.optimizacion .detalle-title {
+  color: #059669;
+}
+
+.servicio-card.marketing .detalle-title {
+  color: #2563eb;
+}
+
+.servicio-card.soporte .detalle-title {
+  color: #7c3aed;
+}
+
+.detalle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detalle-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.check-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.servicio-card.optimizacion .check-icon {
+  color: #10b981;
+}
+
+.servicio-card.marketing .check-icon {
+  color: #3b82f6;
+}
+
+.servicio-card.soporte .check-icon {
+  color: #8b5cf6;
+}
+
+/* Métrica Destacada */
+.metrica-destacada {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  background: white;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.metrica-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.servicio-card.optimizacion .metrica-destacada {
+  border-left: 4px solid #10b981;
+}
+
+.servicio-card.marketing .metrica-destacada {
+  border-left: 4px solid #3b82f6;
+}
+
+.servicio-card.soporte .metrica-destacada {
+  border-left: 4px solid #8b5cf6;
+}
+
 /* CTA Button */
 .servicio-cta {
   display: inline-flex;
@@ -169,27 +318,28 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 0.95rem;
+  margin-top: 16px;
 }
 
-.servicio-card.optimizacion:hover .servicio-cta {
+.servicio-card.optimizacion:hover .servicio-cta,
+.servicio-card.expanded.optimizacion .servicio-cta {
   background: linear-gradient(135deg, #10b981, #059669);
   border-color: #10b981;
   color: white;
-  transform: translateX(4px);
 }
 
-.servicio-card.marketing:hover .servicio-cta {
+.servicio-card.marketing:hover .servicio-cta,
+.servicio-card.expanded.marketing .servicio-cta {
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   border-color: #3b82f6;
   color: white;
-  transform: translateX(4px);
 }
 
-.servicio-card.soporte:hover .servicio-cta {
+.servicio-card.soporte:hover .servicio-cta,
+.servicio-card.expanded.soporte .servicio-cta {
   background: linear-gradient(135deg, #8b5cf6, #7c3aed);
   border-color: #8b5cf6;
   color: white;
-  transform: translateX(4px);
 }
 
 .cta-icon {
@@ -198,8 +348,12 @@
   transition: transform 0.3s ease;
 }
 
-.servicio-cta:hover .cta-icon {
-  transform: translateX(4px);
+.cta-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.servicio-cta:hover .cta-icon:not(.rotated) {
+  transform: translateY(3px);
 }
 
 /* Card Decoration */
@@ -214,17 +368,20 @@
   transition: opacity 0.5s ease;
 }
 
-.servicio-card.optimizacion:hover .card-decoration {
+.servicio-card.optimizacion:hover .card-decoration,
+.servicio-card.expanded.optimizacion .card-decoration {
   opacity: 0.08;
   background: linear-gradient(135deg, #10b981, transparent);
 }
 
-.servicio-card.marketing:hover .card-decoration {
+.servicio-card.marketing:hover .card-decoration,
+.servicio-card.expanded.marketing .card-decoration {
   opacity: 0.08;
   background: linear-gradient(135deg, #3b82f6, transparent);
 }
 
-.servicio-card.soporte:hover .card-decoration {
+.servicio-card.soporte:hover .card-decoration,
+.servicio-card.expanded.soporte .card-decoration {
   opacity: 0.08;
   background: linear-gradient(135deg, #8b5cf6, transparent);
 }
@@ -261,6 +418,10 @@
     padding: 40px 24px;
   }
 
+  .servicio-card.expanded {
+    padding-bottom: 50px;
+  }
+
   .servicio-image-container {
     width: 110px;
     height: 110px;
@@ -274,6 +435,24 @@
   .servicio-description {
     font-size: 0.95rem;
   }
+
+  .servicio-detalles {
+    padding: 20px;
+    margin: 24px 0;
+  }
+
+  .detalle-title {
+    font-size: 1rem;
+  }
+
+  .detalle-list li {
+    font-size: 0.9rem;
+  }
+
+  .metrica-destacada {
+    font-size: 0.9rem;
+    padding: 14px 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -285,6 +464,10 @@
     padding: 32px 20px;
   }
 
+  .servicio-card.expanded {
+    padding-bottom: 40px;
+  }
+
   .servicio-image-container {
     width: 100px;
     height: 100px;
@@ -293,5 +476,35 @@
   .servicio-cta {
     padding: 10px 24px;
     font-size: 0.9rem;
+  }
+
+  .servicio-detalles {
+    padding: 16px;
+  }
+
+  .detalle-title {
+    font-size: 0.95rem;
+  }
+
+  .detalle-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .check-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .metrica-destacada {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    padding: 12px 14px;
+  }
+
+  .metrica-icon {
+    width: 20px;
+    height: 20px;
   }
 }

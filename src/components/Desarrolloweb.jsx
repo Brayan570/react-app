@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import optimizacionIcon from "../assets/optimizacion.png";
 import marketingIcon from "../assets/reputacion.png";
 import soporteIcon from "../assets/soporte.png";
-import "./ServiciosDestacados.css";
+import "./Desarrolloweb.css";
 
 export default function ServiciosDestacados() {
   const [expandedCard, setExpandedCard] = useState(null);
