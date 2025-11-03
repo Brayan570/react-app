@@ -15,8 +15,8 @@ function App() {
       <Hero />
       <Founders />
       <Projects />
-      <PublicidadDigital /> {/* 👈 Aquí aparece tu sección */}
       <About />
+      <PublicidadDigital /> {/* 👈 Aquí aparece tu sección */}
       <Contact />
     </div>
   );
