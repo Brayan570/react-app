@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c4a6d3cffde1e48b7a794db9aa570f15",
+    "revision": "380a4e9649de8ccd0122710745927599",
     "url": "/react-app/index.html"
   },
   {
-    "revision": "e1faba3346c8e71cf21d",
-    "url": "/react-app/static/css/main.37a024da.chunk.css"
+    "revision": "d8aa326d3cacde5a9afd",
+    "url": "/react-app/static/css/main.327924f7.chunk.css"
   },
   {
     "revision": "fab7469ea72266c3099c",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-app/static/js/3.b265e9c7.chunk.js"
   },
   {
-    "revision": "e1faba3346c8e71cf21d",
-    "url": "/react-app/static/js/main.ef9c9ac5.chunk.js"
+    "revision": "d8aa326d3cacde5a9afd",
+    "url": "/react-app/static/js/main.77ebecba.chunk.js"
   },
   {
     "revision": "a7a70e995a1b6830e581",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-app/static/media/kelly.b0d084b3.jpg"
   },
   {
-    "revision": "192ceafbc15c1c732a79d78398fc37d2",
-    "url": "/react-app/static/media/logo.192ceafb.svg"
+    "revision": "903063852f775f275cfe591994a54078",
+    "url": "/react-app/static/media/logo.90306385.png"
   },
   {
     "revision": "a4db77784d9a768c4ec7e516ce1049a2",
