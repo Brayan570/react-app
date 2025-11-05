@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo.png";
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#inicio" className="navbar-logo">
           <div className="logo-icon">
-            <img src={logo} alt="Logo Spektra" className="logo-svg" />
+            <img src={logo} alt="Logo Spektra" className="logo-img" />
           </div>
 
           <span className="logo-text">Spektra</span>
