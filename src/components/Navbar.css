@@ -204,10 +204,11 @@
 }
 
 /* Mobile Menu Overlay */
+/* Menú móvil (oculto por defecto) */
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -100%; /* Se esconde completamente fuera de pantalla */
   width: 100%;
   max-width: 400px;
   height: 100vh;
@@ -216,6 +217,15 @@
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1001;
   overflow-y: auto;
+  visibility: hidden; /* 🔹 Evita que se vea la pestaña pequeña */
+  opacity: 0;
+}
+
+/* Cuando el menú está activo */
+.mobile-menu-overlay.active {
+  right: 0;
+  visibility: visible; /* 🔹 Se hace visible al activar */
+  opacity: 1;
 }
 
 .mobile-menu-overlay.active {
