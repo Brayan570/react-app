@@ -2,6 +2,7 @@
 import React from "react";
 import "./Hero.css";
 import heroImg from "../assets/hero.jpg";
+import { Helmet } from "react-helmet-async";
 
 export default function Hero() {
   const stats = [

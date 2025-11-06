@@ -1,6 +1,7 @@
 // src/components/Founders.jsx
 import React from "react";
 import "./Founders.css";
+import { Helmet } from "react-helmet-async";
 
 // Importamos las imágenes desde src/assets
 import kellyImg from "../assets/kelly.jpg";

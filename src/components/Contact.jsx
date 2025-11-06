@@ -1,6 +1,7 @@
 // src/components/Contact.jsx
 import React, { useState } from "react";
 import "./Contact.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

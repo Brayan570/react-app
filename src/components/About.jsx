@@ -1,6 +1,7 @@
 // src/components/About.jsx
 import React from "react";
 import "./About.css";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   const servicios = [

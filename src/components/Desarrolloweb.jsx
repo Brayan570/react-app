@@ -4,6 +4,7 @@ import optimizacionIcon from "../assets/optimizacion.png";
 import marketingIcon from "../assets/reputacion.png";
 import soporteIcon from "../assets/soporte.png";
 import "./Desarrolloweb.css";
+import { Helmet } from "react-helmet-async";
 
 export default function ServiciosDestacados() {
   const [expandedCard, setExpandedCard] = useState(null);

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import projects from "../data/projects";
 import "./Projects.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Projects() {
   const [filter, setFilter] = useState("all");

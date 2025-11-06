@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import "./Navbar.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

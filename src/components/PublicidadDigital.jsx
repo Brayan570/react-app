@@ -4,6 +4,7 @@ import tiktokLogo from "../assets/tiktok.png";
 import metaLogo from "../assets/meta.png";
 import whatsappLogo from "../assets/whatsapp.png";
 import "./PublicidadDigital.css";
+import { Helmet } from "react-helmet-async";
 
 export default function PublicidadDigital() {
   const [expandedCard, setExpandedCard] = useState(null);
