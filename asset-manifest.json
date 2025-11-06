@@ -1,27 +1,25 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.9949262a.chunk.css",
-    "main.js": "/react-app/static/js/main.7492bad9.chunk.js",
-    "main.js.map": "/react-app/static/js/main.7492bad9.chunk.js.map",
-    "runtime~main.js": "/react-app/static/js/runtime~main.7acad297.js",
-    "runtime~main.js.map": "/react-app/static/js/runtime~main.7acad297.js.map",
-    "static/js/2.dbae897a.chunk.js": "/react-app/static/js/2.dbae897a.chunk.js",
-    "static/js/2.dbae897a.chunk.js.map": "/react-app/static/js/2.dbae897a.chunk.js.map",
-    "static/js/3.b265e9c7.chunk.js": "/react-app/static/js/3.b265e9c7.chunk.js",
-    "static/js/3.b265e9c7.chunk.js.map": "/react-app/static/js/3.b265e9c7.chunk.js.map",
+    "main.css": "/react-app/static/css/main.fb5c0c6a.css",
+    "main.js": "/react-app/static/js/main.a39cf818.js",
+    "static/js/453.311b3dbc.chunk.js": "/react-app/static/js/453.311b3dbc.chunk.js",
+    "static/media/reputacion.png": "/react-app/static/media/reputacion.cb8962d20ce165a25d4f.png",
+    "static/media/hero.jpg": "/react-app/static/media/hero.b25b457c2ee7081c6955.jpg",
+    "static/media/kelly.jpg": "/react-app/static/media/kelly.40a8f18ccaf6cb2cd7e4.jpg",
+    "static/media/meta.png": "/react-app/static/media/meta.9a841f3a45a3db62c3e6.png",
+    "static/media/whatsapp.png": "/react-app/static/media/whatsapp.31d4b1d27126bcc1f665.png",
+    "static/media/tiktok.png": "/react-app/static/media/tiktok.0fd21cb863641baf39f2.png",
+    "static/media/optimizacion.png": "/react-app/static/media/optimizacion.a7bbe0bb74814946e407.png",
+    "static/media/yesid.jpg": "/react-app/static/media/yesid.fcf847dbefec6f1407d5.jpg",
+    "static/media/logo.png": "/react-app/static/media/logo.0b27a8deabb1deb6a1fd.png",
+    "static/media/soporte.png": "/react-app/static/media/soporte.b29957f7793dc6cb5d42.png",
     "index.html": "/react-app/index.html",
-    "precache-manifest.45c3aa4bb9a37bd0a86a653c737c258d.js": "/react-app/precache-manifest.45c3aa4bb9a37bd0a86a653c737c258d.js",
-    "service-worker.js": "/react-app/service-worker.js",
-    "static/css/main.9949262a.chunk.css.map": "/react-app/static/css/main.9949262a.chunk.css.map",
-    "static/media/hero.jpg": "/react-app/static/media/hero.666c28f1.jpg",
-    "static/media/kelly.jpg": "/react-app/static/media/kelly.b0d084b3.jpg",
-    "static/media/logo.png": "/react-app/static/media/logo.90306385.png",
-    "static/media/meta.png": "/react-app/static/media/meta.a4db7778.png",
-    "static/media/optimizacion.png": "/react-app/static/media/optimizacion.c86d21fa.png",
-    "static/media/reputacion.png": "/react-app/static/media/reputacion.186982db.png",
-    "static/media/soporte.png": "/react-app/static/media/soporte.ee301415.png",
-    "static/media/tiktok.png": "/react-app/static/media/tiktok.68e244a5.png",
-    "static/media/whatsapp.png": "/react-app/static/media/whatsapp.d266b611.png",
-    "static/media/yesid.jpg": "/react-app/static/media/yesid.cba1634f.jpg"
-  }
+    "main.fb5c0c6a.css.map": "/react-app/static/css/main.fb5c0c6a.css.map",
+    "main.a39cf818.js.map": "/react-app/static/js/main.a39cf818.js.map",
+    "453.311b3dbc.chunk.js.map": "/react-app/static/js/453.311b3dbc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb5c0c6a.css",
+    "static/js/main.a39cf818.js"
+  ]
 }
