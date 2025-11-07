@@ -46,7 +46,7 @@ export default function Cursos() {
       rating: "5.0",
       price: "Gratis",
       category: "Full Stack",
-      link: "https://www.freecodecamp.org/news/learn-web-development-free-full-stack-developer-courses-for-beginners/",
+      link: "https://videocursos.co/curso-de-desarrollador-web-full-stack/",
       image: "fullstack-icon",
       tags: [
         "MERN",
