@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-app/static/css/main.fb5c0c6a.css",
-    "main.js": "/react-app/static/js/main.a39cf818.js",
+    "main.js": "/react-app/static/js/main.fd881a6e.js",
     "static/js/453.311b3dbc.chunk.js": "/react-app/static/js/453.311b3dbc.chunk.js",
     "static/media/reputacion.png": "/react-app/static/media/reputacion.cb8962d20ce165a25d4f.png",
     "static/media/hero.jpg": "/react-app/static/media/hero.b25b457c2ee7081c6955.jpg",
@@ -15,11 +15,11 @@
     "static/media/soporte.png": "/react-app/static/media/soporte.b29957f7793dc6cb5d42.png",
     "index.html": "/react-app/index.html",
     "main.fb5c0c6a.css.map": "/react-app/static/css/main.fb5c0c6a.css.map",
-    "main.a39cf818.js.map": "/react-app/static/js/main.a39cf818.js.map",
+    "main.fd881a6e.js.map": "/react-app/static/js/main.fd881a6e.js.map",
     "453.311b3dbc.chunk.js.map": "/react-app/static/js/453.311b3dbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fb5c0c6a.css",
-    "static/js/main.a39cf818.js"
+    "static/js/main.fd881a6e.js"
   ]
 }
