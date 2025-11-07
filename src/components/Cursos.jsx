@@ -1,6 +1,7 @@
 // src/components/Cursos.jsx
 import React, { useState } from "react";
 import "./Cursos.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Cursos() {
   const [hoveredCourse, setHoveredCourse] = useState(null);
@@ -15,7 +16,7 @@ export default function Cursos() {
       level: "Principiante",
       students: "2.5K",
       rating: "4.8",
-      price: "$49",
+      price: "Gratis",
       category: "Frontend",
       link: "#",
       image: "react-icon",
@@ -29,7 +30,7 @@ export default function Cursos() {
       level: "Intermedio",
       students: "1.8K",
       rating: "4.9",
-      price: "$59",
+      price: "Gratis",
       category: "Backend",
       link: "#",
       image: "node-icon",
@@ -43,7 +44,7 @@ export default function Cursos() {
       level: "Avanzado",
       students: "3.2K",
       rating: "5.0",
-      price: "$99",
+      price: "Gratis",
       category: "Full Stack",
       link: "#",
       image: "fullstack-icon",
@@ -58,7 +59,7 @@ export default function Cursos() {
       level: "Principiante",
       students: "1.5K",
       rating: "4.7",
-      price: "$39",
+      price: "Gratis",
       category: "Design",
       link: "#",
       image: "design-icon",
@@ -72,9 +73,9 @@ export default function Cursos() {
       level: "Intermedio",
       students: "2.1K",
       rating: "4.8",
-      price: "$69",
+      price: "Gratis",
       category: "Data",
-      link: "#",
+      link: "",
       image: "python-icon",
       tags: ["Python", "Pandas", "ML"],
     },
@@ -86,7 +87,7 @@ export default function Cursos() {
       level: "Avanzado",
       students: "1.2K",
       rating: "4.9",
-      price: "$79",
+      price: "Gratis",
       category: "DevOps",
       link: "#",
       image: "devops-icon",
@@ -112,10 +113,12 @@ export default function Cursos() {
       <div className="cursos-container">
         {/* Header */}
         <div className="cursos-header">
-          <h2 className="cursos-title">Cursos Profesionales</h2>
+          <h2 className="cursos-title">Cursos Para Mejorar tus Habilidades</h2>
           <div className="cursos-underline"></div>
           <p className="cursos-subtitle">
-            Aprende con expertos y lleva tu carrera al siguiente nivel
+            En Spektra Ingenieria no solo creamos soluciones digitales, sino que
+            también te ayudamos a crecer profesionalmente con nuestros cursos
+            especializados totalmente gratuitos y con certificación.
           </p>
         </div>
 
