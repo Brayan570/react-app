@@ -1,0 +1,384 @@
+/* src/components/Cursos.css */
+
+/* Section Styles */
+.cursos-section {
+  padding: 100px 24px;
+  background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
+  position: relative;
+}
+
+.cursos-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.cursos-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cursos-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.cursos-underline {
+  width: 100px;
+  height: 5px;
+  background: linear-gradient(to right, #f59e0b, #ea580c);
+  margin: 0 auto 24px;
+  border-radius: 9999px;
+}
+
+.cursos-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Cursos Grid */
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+/* Curso Card */
+.curso-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 2px solid #f3f4f6;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: fadeInUp 0.6s ease-out backwards;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.curso-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: #f59e0b;
+}
+
+/* Icon Wrapper */
+.curso-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.curso-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.curso-card:hover .curso-icon {
+  transform: rotate(-5deg) scale(1.1);
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+.curso-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #f59e0b;
+  transition: color 0.3s ease;
+}
+
+.curso-card:hover .curso-icon svg {
+  color: white;
+}
+
+/* Content */
+.curso-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Level Badge */
+.curso-level {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.level-beginner {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.level-intermediate {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.level-advanced {
+  background: #fecaca;
+  color: #b91c1c;
+}
+
+/* Title */
+.curso-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.curso-card:hover .curso-title {
+  color: #f59e0b;
+}
+
+/* Description */
+.curso-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* Tags */
+.curso-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.curso-tag {
+  padding: 4px 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.curso-card:hover .curso-tag {
+  background: #fef3c7;
+  border-color: #fde68a;
+  color: #b45309;
+}
+
+/* Info Row */
+.curso-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.info-item svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Footer */
+.curso-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.curso-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #111827;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button */
+.curso-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.curso-button svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.curso-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+}
+
+.curso-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .cursos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cursos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .cursos-section {
+    padding: 70px 16px;
+  }
+
+  .cursos-title {
+    font-size: 2rem;
+  }
+
+  .cursos-subtitle {
+    font-size: 1rem;
+  }
+
+  .cursos-header {
+    margin-bottom: 50px;
+  }
+
+  .cursos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .curso-card {
+    padding: 20px;
+  }
+
+  .curso-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .curso-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .curso-title {
+    font-size: 1.125rem;
+  }
+
+  .curso-description {
+    font-size: 0.8rem;
+  }
+
+  .curso-info {
+    gap: 12px;
+  }
+
+  .info-item {
+    font-size: 0.75rem;
+  }
+
+  .curso-price {
+    font-size: 1.25rem;
+  }
+
+  .curso-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cursos-title {
+    font-size: 1.75rem;
+  }
+
+  .curso-card {
+    padding: 18px;
+  }
+
+  .curso-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .curso-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .curso-tags {
+    gap: 4px;
+  }
+
+  .curso-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+  }
+}
