@@ -3,7 +3,7 @@
 /* Section Styles */
 .cursos-section {
   padding: 100px 24px;
-  background: linear-gradient(135deg, #fefefe 0%, #f8fafc 100%);
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
   position: relative;
 }
 
@@ -41,7 +41,7 @@
 .cursos-underline {
   width: 100px;
   height: 5px;
-  background: linear-gradient(to right, #f59e0b, #ea580c);
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
   margin: 0 auto 24px;
   border-radius: 9999px;
 }
@@ -64,14 +64,16 @@
 /* Curso Card */
 .curso-card {
   background: white;
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 24px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  border: 2px solid #f3f4f6;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeInUp 0.6s ease-out backwards;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
 
 @keyframes fadeInUp {
@@ -86,9 +88,9 @@
 }
 
 .curso-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-  border-color: #f59e0b;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
 }
 
 /* Icon Wrapper */
@@ -99,7 +101,7 @@
 .curso-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -109,13 +111,13 @@
 
 .curso-card:hover .curso-icon {
   transform: rotate(-5deg) scale(1.1);
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
 }
 
 .curso-icon svg {
   width: 32px;
   height: 32px;
-  color: #f59e0b;
+  color: #3b82f6;
   transition: color 0.3s ease;
 }
 
@@ -135,7 +137,7 @@
   display: inline-block;
   padding: 4px 12px;
   border-radius: 50px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -144,17 +146,17 @@
 }
 
 .level-beginner {
-  background: #dbeafe;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
   color: #1e40af;
 }
 
 .level-intermediate {
-  background: #fef3c7;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
   color: #b45309;
 }
 
 .level-advanced {
-  background: #fecaca;
+  background: linear-gradient(135deg, #fecaca, #fca5a5);
   color: #b91c1c;
 }
 
@@ -169,7 +171,7 @@
 }
 
 .curso-card:hover .curso-title {
-  color: #f59e0b;
+  color: #3b82f6;
 }
 
 /* Description */
@@ -191,19 +193,19 @@
 
 .curso-tag {
   padding: 4px 10px;
-  background: #f9fafb;
+  background: #f3f4f6;
   border: 1px solid #e5e7eb;
   border-radius: 50px;
   font-size: 0.7rem;
   font-weight: 600;
-  color: #6b7280;
+  color: #4b5563;
   transition: all 0.3s ease;
 }
 
 .curso-card:hover .curso-tag {
-  background: #fef3c7;
-  border-color: #fde68a;
-  color: #b45309;
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
 }
 
 /* Info Row */
@@ -212,7 +214,7 @@
   gap: 16px;
   margin-bottom: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .info-item {
@@ -228,6 +230,7 @@
   width: 14px;
   height: 14px;
   flex-shrink: 0;
+  color: #3b82f6;
 }
 
 /* Footer */
@@ -242,7 +245,7 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: #111827;
-  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -254,7 +257,7 @@
   align-items: center;
   gap: 6px;
   padding: 10px 18px;
-  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
   color: white;
   text-decoration: none;
   font-weight: 700;
@@ -272,11 +275,29 @@
 
 .curso-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
 }
 
 .curso-button:hover svg {
   transform: translateX(4px);
+}
+
+/* Card Corner Decoration */
+.curso-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, transparent 50%, rgba(59, 130, 246, 0.05) 50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.curso-card:hover::after {
+  opacity: 1;
 }
 
 /* Responsive Design */
@@ -289,7 +310,6 @@
 @media (min-width: 1024px) {
   .cursos-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 @media (max-width: 767px) {
