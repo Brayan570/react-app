@@ -266,6 +266,7 @@
 }
 
 .specialty-tag {
+  position: relative;
   padding: 6px 16px;
   background: rgba(59, 130, 246, 0.15);
   border: 1px solid rgba(59, 130, 246, 0.3);
@@ -273,14 +274,84 @@
   color: #60a5fa;
   font-size: 0.85rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/* Liquid glass effect - base layer */
+.specialty-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.4),
+    rgba(139, 92, 246, 0.4),
+    rgba(236, 72, 153, 0.4)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+/* Liquid glass effect - shimmer layer */
+.specialty-tag::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 70%
+  );
+  transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.specialty-tag:hover::before {
+  opacity: 1;
+  animation: liquidPulse 2s ease-in-out infinite;
+}
+
+.specialty-tag:hover::after {
+  transform: translateX(100%) translateY(100%) rotate(45deg);
+}
+
+@keyframes liquidPulse {
+  0%,
+  100% {
+    filter: blur(8px);
+    transform: scale(1);
+  }
+  50% {
+    filter: blur(12px);
+    transform: scale(1.05);
+  }
+}
+
+.specialty-tag:hover {
+  background: rgba(59, 130, 246, 0.3);
+  border-color: rgba(139, 92, 246, 0.6);
+  color: #ffffff;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 32px rgba(59, 130, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px);
 }
 
 .founder-card:hover .specialty-tag {
-  background: rgba(59, 130, 246, 0.25);
-  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
   color: #93c5fd;
-  transform: translateY(-2px);
 }
 
 /* Social Links */
