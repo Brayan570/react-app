@@ -30,7 +30,7 @@ export default function Founders() {
       ],
       social: {
         linkedin: "#",
-        github: "#",
+        github: "https://github.com/kellygom",
         email: "kelly@company.com",
       },
     },
