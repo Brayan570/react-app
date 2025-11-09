@@ -59,9 +59,9 @@ export default function Founders() {
         "Git",
       ],
       social: {
-        linkedin: "#",
-        github: "#",
-        email: "brayan@company.com",
+        linkedin: "https://www.linkedin.com/in/brayan-g%C3%B3mez-5319231b7/",
+        github: "https://github.com/Brayan570",
+        email: "gomezbrayanyesid78@gmail.com",
       },
     },
   ];
