@@ -54,9 +54,9 @@ export default function Hero() {
 
         {/* Subtitle */}
         <p className="hero-subtitle">
-          Somos <strong>Spektra Ingeniería</strong>, y nuestra misión es
-          impulsar el éxito de tu negocio en el mundo digital con experiencias
-          memorables que te diferencian.
+          Somos <strong>Zelnora Software</strong>, y nuestra misión es impulsar
+          el éxito de tu negocio en el mundo digital con experiencias memorables
+          que te diferencian.
         </p>
 
         {/* CTA Buttons */}
