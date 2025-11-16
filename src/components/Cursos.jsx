@@ -125,9 +125,10 @@ export default function Cursos() {
           <h2 className="cursos-title">Cursos Para Mejorar tus Habilidades</h2>
           <div className="cursos-underline"></div>
           <p className="cursos-subtitle">
-            En Spektra Ingenieria no solo creamos soluciones digitales, sino que
-            también te ayudamos a crecer profesionalmente con nuestros cursos
-            especializados totalmente gratuitos y con certificación.
+            En Zelnora Software no solo creamos soluciones digitales, sino que
+            también te ayudamos a crecer profesionalmente con cursos recopilados
+            de diferentes fuentes. Ya seas un desarrollador principiante o un
+            profesional experimentado.
           </p>
         </div>
 

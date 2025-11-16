@@ -42,8 +42,8 @@ export default function Navbar() {
             <img src={logo} alt="Logo Spektra" className="logo-img" />
           </div>
 
-          <span className="logo-text">Spektra</span>
-          <span className="logo-subtext">Ingeniería</span>
+          <span className="logo-text">Zelnora</span>
+          <span className="logo-subtext">Software</span>
         </a>
 
         {/* Desktop Menu */}
