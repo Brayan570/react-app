@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/react-app/static/css/main.c8d48b6d.css",
-    "main.js": "/react-app/static/js/main.9f6b168d.js",
+    "main.js": "/react-app/static/js/main.316542af.js",
     "static/js/453.311b3dbc.chunk.js": "/react-app/static/js/453.311b3dbc.chunk.js",
     "static/media/reputacion.png": "/react-app/static/media/reputacion.cb8962d20ce165a25d4f.png",
+    "static/media/logo.png": "/react-app/static/media/logo.ade9b38f2bd78873abac.png",
     "static/media/hero.jpg": "/react-app/static/media/hero.b25b457c2ee7081c6955.jpg",
     "static/media/kelly.jpg": "/react-app/static/media/kelly.40a8f18ccaf6cb2cd7e4.jpg",
     "static/media/meta.png": "/react-app/static/media/meta.9a841f3a45a3db62c3e6.png",
@@ -11,15 +12,14 @@
     "static/media/tiktok.png": "/react-app/static/media/tiktok.0fd21cb863641baf39f2.png",
     "static/media/optimizacion.png": "/react-app/static/media/optimizacion.a7bbe0bb74814946e407.png",
     "static/media/yesid.jpg": "/react-app/static/media/yesid.fcf847dbefec6f1407d5.jpg",
-    "static/media/logo.png": "/react-app/static/media/logo.0b27a8deabb1deb6a1fd.png",
     "static/media/soporte.png": "/react-app/static/media/soporte.b29957f7793dc6cb5d42.png",
     "index.html": "/react-app/index.html",
     "main.c8d48b6d.css.map": "/react-app/static/css/main.c8d48b6d.css.map",
-    "main.9f6b168d.js.map": "/react-app/static/js/main.9f6b168d.js.map",
+    "main.316542af.js.map": "/react-app/static/js/main.316542af.js.map",
     "453.311b3dbc.chunk.js.map": "/react-app/static/js/453.311b3dbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8d48b6d.css",
-    "static/js/main.9f6b168d.js"
+    "static/js/main.316542af.js"
   ]
 }
