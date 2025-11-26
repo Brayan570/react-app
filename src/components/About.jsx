@@ -15,7 +15,7 @@ export default function About() {
       icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4",
       title: "Desarrollo de Software a Medida",
       description:
-        "Resolvemos tus desafíos operativos con soluciones personalizadas. Desde sistemas CRM/ERP hasta aplicaciones móviles innovadoras.",
+        "Resolvemos tus desafíos operativos con soluciones personalizadas. Desde sistemas POS, Landing Pages hasta plataformas complejas adaptadas a tus necesidades, Sistemas SaaS y más.",
     },
     {
       icon: "M13 10V3L4 14h7v7l9-11h-7z",
@@ -64,8 +64,7 @@ export default function About() {
                   className="servicio-icon"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                  viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -100,8 +99,7 @@ export default function About() {
                     className="valor-icon"
                     fill="none"
                     stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                    viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
