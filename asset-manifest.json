@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.0eeb97ad.css",
+    "main.css": "/react-app/static/css/main.da7432c1.css",
     "main.js": "/react-app/static/js/main.9f4d7641.js",
     "static/js/453.311b3dbc.chunk.js": "/react-app/static/js/453.311b3dbc.chunk.js",
     "static/media/reputacion.png": "/react-app/static/media/reputacion.cb8962d20ce165a25d4f.png",
@@ -14,12 +14,12 @@
     "static/media/yesid.jpg": "/react-app/static/media/yesid.fcf847dbefec6f1407d5.jpg",
     "static/media/soporte.png": "/react-app/static/media/soporte.b29957f7793dc6cb5d42.png",
     "index.html": "/react-app/index.html",
-    "main.0eeb97ad.css.map": "/react-app/static/css/main.0eeb97ad.css.map",
+    "main.da7432c1.css.map": "/react-app/static/css/main.da7432c1.css.map",
     "main.9f4d7641.js.map": "/react-app/static/js/main.9f4d7641.js.map",
     "453.311b3dbc.chunk.js.map": "/react-app/static/js/453.311b3dbc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0eeb97ad.css",
+    "static/css/main.da7432c1.css",
     "static/js/main.9f4d7641.js"
   ]
 }
