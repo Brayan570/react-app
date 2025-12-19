@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import PublicidadDigital from "./components/PublicidadDigital"; // 👈 Importa tu nuevo componente
 import Desarrolloweb from "./components/Desarrolloweb";
 import Cursos from "./components/Cursos";
+import Footer from "./components/Footer";
 import "./index.css"; // 👈 No hace falta asignarlo a una variable
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Desarrolloweb />
       <Cursos />
       <Contact />
+      <Footer />
     </div>
   );
 }
