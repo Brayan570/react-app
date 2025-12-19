@@ -3,13 +3,32 @@
 /* Section Styles */
 .servicios-destacados-section {
   padding: 100px 24px;
-  background: linear-gradient(to bottom, #ffffff, #f9fafb);
+  background: linear-gradient(to bottom, #ffffff, #f0fdf4);
   position: relative;
+}
+
+.servicios-destacados-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 30% 20%,
+      rgba(16, 185, 129, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(52, 211, 153, 0.05) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
 }
 
 .servicios-destacados-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 /* Header Styles */
@@ -21,7 +40,7 @@
 .servicios-title {
   font-size: 2.75rem;
   font-weight: 800;
-  color: #111827;
+  color: #064e3b;
   margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
@@ -29,13 +48,14 @@
 .title-underline-servicios {
   width: 100px;
   height: 5px;
-  background: linear-gradient(to right, #06b6d4, #3b82f6, #8b5cf6);
+  background: linear-gradient(to right, #10b981, #34d399, #6ee7b7);
   margin: 0 auto 24px;
   border-radius: 9999px;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
 }
 
 .servicios-subtitle {
-  color: #6b7280;
+  color: #047857;
   font-size: 1.125rem;
   max-width: 650px;
   margin: 0 auto;
@@ -55,15 +75,15 @@
   background: white;
   border-radius: 24px;
   padding: 48px 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.12);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  border: 2px solid transparent;
+  border: 2px solid rgba(16, 185, 129, 0.1);
 }
 
 .servicio-card:hover {
   transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
 }
 
 .servicio-card.expanded {
@@ -74,32 +94,32 @@
 /* Color Variants */
 .servicio-card.optimizacion:hover {
   border-color: #10b981;
-  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.25);
 }
 
 .servicio-card.marketing:hover {
-  border-color: #3b82f6;
-  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+  border-color: #059669;
+  box-shadow: 0 20px 40px rgba(5, 150, 105, 0.25);
 }
 
 .servicio-card.soporte:hover {
-  border-color: #8b5cf6;
-  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2);
+  border-color: #34d399;
+  box-shadow: 0 20px 40px rgba(52, 211, 153, 0.25);
 }
 
 .servicio-card.expanded.optimizacion {
   border-color: #10b981;
-  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 25px 50px rgba(16, 185, 129, 0.3);
 }
 
 .servicio-card.expanded.marketing {
-  border-color: #3b82f6;
-  box-shadow: 0 25px 50px rgba(59, 130, 246, 0.25);
+  border-color: #059669;
+  box-shadow: 0 25px 50px rgba(5, 150, 105, 0.3);
 }
 
 .servicio-card.expanded.soporte {
-  border-color: #8b5cf6;
-  box-shadow: 0 25px 50px rgba(139, 92, 246, 0.25);
+  border-color: #34d399;
+  box-shadow: 0 25px 50px rgba(52, 211, 153, 0.3);
 }
 
 /* Image Container */
@@ -120,7 +140,7 @@
   position: relative;
   z-index: 2;
   transition: transform 0.5s ease;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0 4px 12px rgba(16, 185, 129, 0.2));
 }
 
 .servicio-card:hover .servicio-image {
@@ -139,18 +159,18 @@
 }
 
 .servicio-card.optimizacion:hover .image-glow {
-  opacity: 0.3;
-  background: radial-gradient(circle, rgba(16, 185, 129, 0.4), transparent);
+  opacity: 0.4;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.5), transparent);
 }
 
 .servicio-card.marketing:hover .image-glow {
-  opacity: 0.3;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.4), transparent);
+  opacity: 0.4;
+  background: radial-gradient(circle, rgba(5, 150, 105, 0.5), transparent);
 }
 
 .servicio-card.soporte:hover .image-glow {
-  opacity: 0.3;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.4), transparent);
+  opacity: 0.4;
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.5), transparent);
 }
 
 /* Content */
@@ -163,13 +183,13 @@
 .servicio-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #111827;
+  color: #064e3b;
   margin-bottom: 16px;
   line-height: 1.3;
 }
 
 .servicio-description {
-  color: #6b7280;
+  color: #047857;
   line-height: 1.7;
   margin-bottom: 28px;
   font-size: 1rem;
@@ -181,12 +201,13 @@
   padding: 24px;
   background: linear-gradient(
     135deg,
-    rgba(249, 250, 251, 0.8),
-    rgba(243, 244, 246, 0.8)
+    rgba(236, 253, 245, 0.8),
+    rgba(209, 250, 229, 0.8)
   );
   border-radius: 16px;
   text-align: left;
   animation: slideDown 0.4s ease-out;
+  border: 1px solid rgba(16, 185, 129, 0.15);
 }
 
 @keyframes slideDown {
@@ -214,7 +235,7 @@
   gap: 8px;
   font-size: 1.125rem;
   font-weight: 700;
-  color: #374151;
+  color: #047857;
   margin-bottom: 12px;
 }
 
@@ -229,11 +250,11 @@
 }
 
 .servicio-card.marketing .detalle-title {
-  color: #2563eb;
+  color: #047857;
 }
 
 .servicio-card.soporte .detalle-title {
-  color: #7c3aed;
+  color: #10b981;
 }
 
 .detalle-list {
@@ -247,7 +268,7 @@
   align-items: flex-start;
   gap: 10px;
   padding: 8px 0;
-  color: #4b5563;
+  color: #065f46;
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -264,11 +285,11 @@
 }
 
 .servicio-card.marketing .check-icon {
-  color: #3b82f6;
+  color: #059669;
 }
 
 .servicio-card.soporte .check-icon {
-  color: #8b5cf6;
+  color: #34d399;
 }
 
 /* Métrica Destacada */
@@ -280,9 +301,9 @@
   background: white;
   border-radius: 12px;
   margin-top: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.15);
   font-weight: 600;
-  color: #1f2937;
+  color: #064e3b;
   font-size: 0.95rem;
 }
 
@@ -297,11 +318,23 @@
 }
 
 .servicio-card.marketing .metrica-destacada {
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid #059669;
 }
 
 .servicio-card.soporte .metrica-destacada {
-  border-left: 4px solid #8b5cf6;
+  border-left: 4px solid #34d399;
+}
+
+.servicio-card.optimizacion .metrica-icon {
+  color: #10b981;
+}
+
+.servicio-card.marketing .metrica-icon {
+  color: #059669;
+}
+
+.servicio-card.soporte .metrica-icon {
+  color: #34d399;
 }
 
 /* CTA Button */
@@ -310,15 +343,35 @@
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  border: 2px solid #e5e7eb;
+  border: 2px solid #d1fae5;
   background: transparent;
-  color: #374151;
+  color: #047857;
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 0.95rem;
   margin-top: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio-cta::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+
+.servicio-cta:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .servicio-card.optimizacion:hover .servicio-cta,
@@ -330,15 +383,15 @@
 
 .servicio-card.marketing:hover .servicio-cta,
 .servicio-card.expanded.marketing .servicio-cta {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  border-color: #3b82f6;
+  background: linear-gradient(135deg, #059669, #047857);
+  border-color: #059669;
   color: white;
 }
 
 .servicio-card.soporte:hover .servicio-cta,
 .servicio-card.expanded.soporte .servicio-cta {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-  border-color: #8b5cf6;
+  background: linear-gradient(135deg, #34d399, #10b981);
+  border-color: #34d399;
   color: white;
 }
 
@@ -346,6 +399,8 @@
   width: 20px;
   height: 20px;
   transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .cta-icon.rotated {
@@ -370,20 +425,20 @@
 
 .servicio-card.optimizacion:hover .card-decoration,
 .servicio-card.expanded.optimizacion .card-decoration {
-  opacity: 0.08;
+  opacity: 0.1;
   background: linear-gradient(135deg, #10b981, transparent);
 }
 
 .servicio-card.marketing:hover .card-decoration,
 .servicio-card.expanded.marketing .card-decoration {
-  opacity: 0.08;
-  background: linear-gradient(135deg, #3b82f6, transparent);
+  opacity: 0.1;
+  background: linear-gradient(135deg, #059669, transparent);
 }
 
 .servicio-card.soporte:hover .card-decoration,
 .servicio-card.expanded.soporte .card-decoration {
-  opacity: 0.08;
-  background: linear-gradient(135deg, #8b5cf6, transparent);
+  opacity: 0.1;
+  background: linear-gradient(135deg, #34d399, transparent);
 }
 
 /* Responsive Design */
