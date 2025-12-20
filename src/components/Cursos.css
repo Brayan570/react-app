@@ -3,7 +3,7 @@
 /* Section Styles */
 .cursos-section {
   padding: 100px 24px;
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: var(--gradient-bg);
   position: relative;
 }
 
@@ -13,14 +13,10 @@
   inset: 0;
   background-image: radial-gradient(
       circle at 25% 30%,
-      rgba(16, 185, 129, 0.06) 0%,
+      var(--overlay-light) 0%,
       transparent 50%
     ),
-    radial-gradient(
-      circle at 75% 70%,
-      rgba(52, 211, 153, 0.06) 0%,
-      transparent 50%
-    );
+    radial-gradient(circle at 75% 70%, var(--overlay-light) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -52,7 +48,7 @@
 .cursos-title {
   font-size: 3rem;
   font-weight: 800;
-  color: #064e3b;
+  color: var(--text-primary);
   margin-bottom: 16px;
   letter-spacing: -0.5px;
 }
@@ -60,15 +56,15 @@
 .cursos-underline {
   width: 100px;
   height: 5px;
-  background: linear-gradient(to right, #10b981, #34d399);
+  background: var(--gradient-primary);
   margin: 0 auto 24px;
   border-radius: 9999px;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 20px var(--overlay-strong);
 }
 
 .cursos-subtitle {
   font-size: 1.25rem;
-  color: #047857;
+  color: var(--text-secondary);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
@@ -83,11 +79,11 @@
 
 /* Curso Card */
 .curso-card {
-  background: white;
+  background: var(--bg-card);
   border-radius: 20px;
   padding: 24px;
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.12);
-  border: 2px solid rgba(16, 185, 129, 0.1);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--border-light);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fadeInUp 0.6s ease-out backwards;
   display: flex;
@@ -109,8 +105,8 @@
 
 .curso-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.25);
-  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
 }
 
 /* Icon Wrapper */
@@ -121,25 +117,25 @@
 .curso-icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  background: linear-gradient(135deg, var(--primary-200), var(--primary-300));
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  border: 1px solid var(--border-medium);
 }
 
 .curso-card:hover .curso-icon {
   transform: rotate(-5deg) scale(1.1);
-  background: linear-gradient(135deg, #10b981, #059669);
-  border-color: rgba(16, 185, 129, 0.4);
+  background: var(--gradient-primary);
+  border-color: var(--border-strong);
 }
 
 .curso-icon svg {
   width: 32px;
   height: 32px;
-  color: #059669;
+  color: var(--primary-700);
   transition: color 0.3s ease;
 }
 
@@ -170,44 +166,44 @@
 
 .level-beginner,
 .level-Principiante {
-  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-  color: #047857;
-  border-color: rgba(16, 185, 129, 0.3);
+  background: linear-gradient(135deg, var(--primary-200), var(--primary-300));
+  color: var(--text-secondary);
+  border-color: var(--border-medium);
 }
 
 .level-intermediate,
 .level-Intermedio {
-  background: linear-gradient(135deg, #6ee7b7, #34d399);
-  color: #065f46;
-  border-color: rgba(5, 150, 105, 0.3);
+  background: linear-gradient(135deg, var(--primary-400), var(--primary-500));
+  color: var(--primary-900);
+  border-color: var(--border-strong);
 }
 
 .level-advanced,
 .level-Avanzado,
 .level-Principiante.a.Avanzado {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: var(--gradient-primary);
   color: white;
-  border-color: rgba(5, 150, 105, 0.4);
+  border-color: var(--border-strong);
 }
 
 /* Title */
 .curso-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #064e3b;
+  color: var(--text-primary);
   margin-bottom: 8px;
   line-height: 1.4;
   transition: color 0.3s ease;
 }
 
 .curso-card:hover .curso-title {
-  color: #10b981;
+  color: var(--primary-600);
 }
 
 /* Description */
 .curso-description {
   font-size: 0.875rem;
-  color: #047857;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 16px;
   flex: 1;
@@ -223,18 +219,18 @@
 
 .curso-tag {
   padding: 4px 10px;
-  background: #f0fdf4;
-  border: 1px solid #d1fae5;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
   border-radius: 50px;
   font-size: 0.7rem;
   font-weight: 600;
-  color: #059669;
+  color: var(--primary-700);
   transition: all 0.3s ease;
 }
 
 .curso-card:hover .curso-tag {
-  background: #d1fae5;
-  border-color: #a7f3d0;
+  background: var(--primary-200);
+  border-color: var(--primary-300);
   transform: translateY(-2px);
 }
 
@@ -244,7 +240,7 @@
   gap: 16px;
   margin-bottom: 16px;
   padding-bottom: 16px;
-  border-bottom: 1px solid #d1fae5;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .info-item {
@@ -252,7 +248,7 @@
   align-items: center;
   gap: 4px;
   font-size: 0.8rem;
-  color: #047857;
+  color: var(--text-secondary);
   font-weight: 600;
 }
 
@@ -260,7 +256,7 @@
   width: 14px;
   height: 14px;
   flex-shrink: 0;
-  color: #10b981;
+  color: var(--primary-600);
 }
 
 /* Footer */
@@ -274,8 +270,8 @@
 .curso-price {
   font-size: 1.5rem;
   font-weight: 800;
-  color: #064e3b;
-  background: linear-gradient(135deg, #10b981, #34d399);
+  color: var(--text-primary);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -287,7 +283,7 @@
   align-items: center;
   gap: 6px;
   padding: 10px 18px;
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: var(--gradient-primary);
   color: white;
   text-decoration: none;
   font-weight: 700;
@@ -327,8 +323,8 @@
 
 .curso-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.5);
-  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: var(--shadow-md);
+  background: var(--gradient-secondary);
 }
 
 .curso-button:hover svg {
@@ -346,7 +342,7 @@
   background: linear-gradient(
     135deg,
     transparent 50%,
-    rgba(16, 185, 129, 0.08) 50%
+    var(--overlay-light) 50%
   );
   pointer-events: none;
   opacity: 0;

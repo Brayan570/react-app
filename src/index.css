@@ -12,12 +12,14 @@ code {
     monospace;
 }
 
+/* src/index.css o src/App.css - Variables Globales de Tema */
+
 /* ============================================
-   VARIABLES DE TEMA - MODO CLARO
+   VARIABLES DE TEMA - MODO CLARO (DEFAULT)
    ============================================ */
 
 :root {
-  /* Colores principales */
+  /* Colores principales de la marca */
   --primary-50: #f0fdf4;
   --primary-100: #dcfce7;
   --primary-200: #d1fae5;
@@ -29,43 +31,69 @@ code {
   --primary-800: #047857;
   --primary-900: #064e3b;
 
-  /* Backgrounds */
+  /* Backgrounds - Fondos */
   --bg-primary: #ffffff;
   --bg-secondary: #f0fdf4;
   --bg-tertiary: #ecfdf5;
   --bg-card: #ffffff;
   --bg-elevated: #ffffff;
+  --bg-hero: linear-gradient(
+    135deg,
+    rgba(6, 78, 59, 0.92) 0%,
+    rgba(4, 120, 87, 0.88) 50%,
+    rgba(6, 78, 59, 0.92) 100%
+  );
 
-  /* Text Colors */
+  /* Text Colors - Colores de texto */
   --text-primary: #064e3b;
   --text-secondary: #047857;
   --text-tertiary: #059669;
   --text-muted: #6ee7b7;
   --text-inverse: #ffffff;
+  --text-link: #10b981;
 
-  /* Borders */
+  /* Borders - Bordes */
   --border-light: rgba(16, 185, 129, 0.1);
   --border-medium: rgba(16, 185, 129, 0.2);
   --border-strong: rgba(16, 185, 129, 0.3);
+  --border-accent: rgba(16, 185, 129, 0.4);
 
-  /* Shadows */
+  /* Shadows - Sombras */
   --shadow-sm: 0 4px 12px rgba(16, 185, 129, 0.1);
   --shadow-md: 0 10px 30px rgba(16, 185, 129, 0.15);
   --shadow-lg: 0 20px 40px rgba(16, 185, 129, 0.25);
+  --shadow-xl: 0 25px 50px rgba(16, 185, 129, 0.3);
 
-  /* Overlays */
+  /* Overlays - Superposiciones */
   --overlay-light: rgba(16, 185, 129, 0.05);
   --overlay-medium: rgba(16, 185, 129, 0.1);
   --overlay-strong: rgba(16, 185, 129, 0.15);
 
-  /* Gradients */
+  /* Gradients - Gradientes */
   --gradient-primary: linear-gradient(135deg, #10b981, #34d399);
   --gradient-secondary: linear-gradient(135deg, #059669, #10b981);
+  --gradient-tertiary: linear-gradient(135deg, #047857, #059669);
   --gradient-bg: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #064e3b 0%,
+    #047857 50%,
+    #059669 100%
+  );
+
+  /* Navbar específico */
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --navbar-bg-scrolled: rgba(255, 255, 255, 0.95);
+
+  /* Buttons */
+  --btn-primary-bg: linear-gradient(135deg, #10b981, #059669);
+  --btn-primary-hover: linear-gradient(135deg, #059669, #047857);
+  --btn-secondary-bg: rgba(16, 185, 129, 0.15);
+  --btn-secondary-hover: rgba(16, 185, 129, 0.25);
 }
 
 /* ============================================
-   TEMA OSCURO
+   TEMA OSCURO - DARK MODE
    ============================================ */
 
 .dark-mode {
@@ -75,25 +103,34 @@ code {
   --bg-tertiary: #132822;
   --bg-card: #142d25;
   --bg-elevated: #1a3830;
+  --bg-hero: linear-gradient(
+    135deg,
+    rgba(10, 22, 18, 0.95) 0%,
+    rgba(15, 30, 26, 0.92) 50%,
+    rgba(10, 22, 18, 0.95) 100%
+  );
 
-  /* Text Colors adaptados */
+  /* Text Colors adaptados para oscuro */
   --text-primary: #d1fae5;
   --text-secondary: #a7f3d0;
   --text-tertiary: #6ee7b7;
   --text-muted: #34d399;
   --text-inverse: #064e3b;
+  --text-link: #34d399;
 
   /* Borders más visibles en oscuro */
   --border-light: rgba(52, 211, 153, 0.15);
   --border-medium: rgba(52, 211, 153, 0.25);
   --border-strong: rgba(52, 211, 153, 0.4);
+  --border-accent: rgba(52, 211, 153, 0.5);
 
-  /* Shadows adaptadas */
+  /* Shadows adaptadas para oscuro */
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 25px 50px rgba(0, 0, 0, 0.7);
 
-  /* Overlays */
+  /* Overlays para oscuro */
   --overlay-light: rgba(52, 211, 153, 0.08);
   --overlay-medium: rgba(52, 211, 153, 0.12);
   --overlay-strong: rgba(52, 211, 153, 0.2);
@@ -101,12 +138,102 @@ code {
   /* Gradients oscuros */
   --gradient-primary: linear-gradient(135deg, #059669, #10b981);
   --gradient-secondary: linear-gradient(135deg, #047857, #059669);
+  --gradient-tertiary: linear-gradient(135deg, #065f46, #047857);
   --gradient-bg: linear-gradient(135deg, #0f1e1a 0%, #142d25 50%, #1a3830 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #0a1612 0%,
+    #0f1e1a 50%,
+    #132822 100%
+  );
+
+  /* Navbar oscuro */
+  --navbar-bg: rgba(10, 22, 18, 0.85);
+  --navbar-bg-scrolled: rgba(10, 22, 18, 0.98);
+
+  /* Buttons oscuros */
+  --btn-primary-bg: linear-gradient(135deg, #059669, #10b981);
+  --btn-primary-hover: linear-gradient(135deg, #047857, #059669);
+  --btn-secondary-bg: rgba(52, 211, 153, 0.15);
+  --btn-secondary-hover: rgba(52, 211, 153, 0.25);
 }
 
-/* Transiciones suaves para el cambio de tema */
-body,
-body * {
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+/* ============================================
+   ESTILOS GLOBALES CON TRANSICIONES
+   ============================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Transiciones suaves para todos los elementos */
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Excepciones para elementos que necesitan transiciones específicas */
+.hero-section,
+.navbar,
+.theme-toggle,
+button,
+a {
+  /* Estos elementos ya tienen sus propias transiciones definidas */
+}
+
+/* Ajuste para evitar que el contenido quede bajo el navbar */
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+/* Scrollbar personalizado para tema oscuro */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-600);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--primary-700);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-600);
 }

@@ -3,7 +3,11 @@
 /* Section Styles */
 .publicidad-section {
   padding: 80px 24px;
-  background: linear-gradient(to bottom, #f0fdf4, #ffffff);
+  background: linear-gradient(
+    to bottom,
+    var(--bg-secondary),
+    var(--bg-primary)
+  );
   position: relative;
 }
 
@@ -13,14 +17,10 @@
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 30%,
-      rgba(16, 185, 129, 0.05) 0%,
+      var(--overlay-light) 0%,
       transparent 50%
     ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(52, 211, 153, 0.05) 0%,
-      transparent 50%
-    );
+    radial-gradient(circle at 80% 70%, var(--overlay-light) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -40,21 +40,21 @@
 .publicidad-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #064e3b;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
 .title-underline {
   width: 96px;
   height: 4px;
-  background: linear-gradient(to right, #10b981, #34d399, #6ee7b7);
+  background: var(--gradient-primary);
   margin: 0 auto 24px;
   border-radius: 9999px;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 20px var(--overlay-strong);
 }
 
 .publicidad-subtitle {
-  color: #047857;
+  color: var(--text-secondary);
   font-size: 1.125rem;
   max-width: 672px;
   margin: 0 auto;
@@ -74,17 +74,17 @@
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  background: white;
+  background: var(--bg-card);
   padding: 32px;
-  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.15);
+  box-shadow: var(--shadow-md);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--border-light);
 }
 
 .platform-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.3);
-  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--border-strong);
 }
 
 .platform-card.expanded {
@@ -103,28 +103,10 @@
   opacity: 1;
 }
 
-.tiktok-bg {
-  background: linear-gradient(
-    135deg,
-    rgba(16, 185, 129, 0.08),
-    rgba(52, 211, 153, 0.08)
-  );
-}
-
-.meta-bg {
-  background: linear-gradient(
-    135deg,
-    rgba(5, 150, 105, 0.08),
-    rgba(16, 185, 129, 0.08)
-  );
-}
-
+.tiktok-bg,
+.meta-bg,
 .whatsapp-bg {
-  background: linear-gradient(
-    135deg,
-    rgba(34, 197, 94, 0.08),
-    rgba(21, 128, 61, 0.08)
-  );
+  background: var(--overlay-light);
 }
 
 /* Card Content */
@@ -140,31 +122,25 @@
   margin: 0 auto 24px;
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
+  box-shadow: var(--shadow-md);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  border: 2px solid rgba(16, 185, 129, 0.15);
+  background: var(--bg-card);
+  border: 2px solid var(--border-medium);
 }
 
 .platform-card:hover .logo-container {
   transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.3);
-  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
 }
 
-.tiktok-gradient {
-  background: linear-gradient(135deg, #10b981, #34d399);
-}
-
-.meta-gradient {
-  background: linear-gradient(135deg, #059669, #10b981);
-}
-
+.tiktok-gradient,
+.meta-gradient,
 .whatsapp-gradient {
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: var(--gradient-primary);
 }
 
 .platform-logo {
@@ -182,13 +158,13 @@
 .platform-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #064e3b;
+  color: var(--text-primary);
   margin-bottom: 12px;
   transition: all 0.3s ease;
 }
 
 .platform-card:hover .platform-name {
-  background: linear-gradient(to right, #10b981, #34d399);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -196,7 +172,7 @@
 
 /* Platform Description */
 .platform-description {
-  color: #047857;
+  color: var(--text-secondary);
   line-height: 1.625;
   margin-bottom: 16px;
 }
@@ -205,7 +181,7 @@
 .detailed-info {
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 2px solid #d1fae5;
+  border-top: 2px solid var(--border-light);
   animation: slideDown 0.4s ease-out;
 }
 
@@ -223,7 +199,7 @@
 .info-title {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #064e3b;
+  color: var(--text-primary);
   margin-bottom: 16px;
 }
 
@@ -234,9 +210,9 @@
 .info-subtitle {
   font-size: 1rem;
   font-weight: 600;
-  color: #047857;
+  color: var(--text-secondary);
   margin-bottom: 12px;
-  background: linear-gradient(to right, #10b981, #34d399);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -251,7 +227,7 @@
 .info-list li {
   padding: 8px 0 8px 24px;
   position: relative;
-  color: #047857;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -260,20 +236,20 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #10b981;
+  color: var(--primary-600);
   font-weight: bold;
   font-size: 1.1rem;
 }
 
 .info-text {
-  color: #047857;
+  color: var(--text-secondary);
   line-height: 1.7;
   font-size: 0.95rem;
   font-style: italic;
   padding: 12px;
-  background: #f0fdf4;
+  background: var(--bg-secondary);
   border-radius: 8px;
-  border-left: 3px solid #10b981;
+  border-left: 3px solid var(--primary-600);
 }
 
 /* CTA Link */
@@ -281,7 +257,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #10b981, #34d399);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -301,7 +277,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #10b981, #34d399);
+  background: var(--gradient-primary);
   transform: translateX(-50%);
   transition: width 0.3s ease;
 }
@@ -323,7 +299,7 @@
   width: 20px;
   height: 20px;
   margin-left: 8px;
-  stroke: #10b981;
+  stroke: var(--primary-600);
   transition: transform 0.3s ease;
 }
 
@@ -350,18 +326,7 @@
   border-radius: 16px;
   opacity: 0.3;
   filter: blur(24px);
-}
-
-.tiktok-gradient.border-glow {
-  background: linear-gradient(135deg, #10b981, #34d399);
-}
-
-.meta-gradient.border-glow {
-  background: linear-gradient(135deg, #059669, #10b981);
-}
-
-.whatsapp-gradient.border-glow {
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: var(--gradient-primary);
 }
 
 /* CTA Button Section */

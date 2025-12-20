@@ -13,7 +13,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #ffffff;
+  color: var(--text-inverse);
   overflow: hidden;
 }
 
@@ -22,12 +22,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(6, 78, 59, 0.92) 0%,
-    rgba(4, 120, 87, 0.88) 50%,
-    rgba(6, 78, 59, 0.92) 100%
-  );
+  background: var(--bg-hero);
   background-size: 300% 300%;
   animation: gradientShift 15s ease infinite;
   z-index: 1;
@@ -50,14 +45,10 @@
   inset: 0;
   background-image: radial-gradient(
       circle at 20% 30%,
-      rgba(16, 185, 129, 0.2) 0%,
+      var(--overlay-medium) 0%,
       transparent 50%
     ),
-    radial-gradient(
-      circle at 80% 70%,
-      rgba(52, 211, 153, 0.18) 0%,
-      transparent 50%
-    );
+    radial-gradient(circle at 80% 70%, var(--overlay-light) 0%, transparent 50%);
   z-index: 1;
 }
 
@@ -72,10 +63,11 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(16, 185, 129, 0.7);
+  background: var(--primary-600);
   border-radius: 50%;
   animation: floatParticle 20s infinite ease-in-out;
-  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 0 10px var(--primary-500);
+  opacity: 0.7;
 }
 
 .particle:nth-child(1) {
@@ -154,16 +146,16 @@
   align-items: center;
   gap: 8px;
   padding: 10px 24px;
-  background: rgba(16, 185, 129, 0.18);
-  border: 1px solid rgba(16, 185, 129, 0.4);
+  background: var(--overlay-light);
+  border: 1px solid var(--border-medium);
   border-radius: 50px;
-  color: #6ee7b7;
+  color: var(--primary-300);
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 32px;
   backdrop-filter: blur(10px);
   animation: fadeInDown 1s ease-out 0.2s backwards;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 20px var(--overlay-medium);
 }
 
 .badge-icon {
@@ -190,21 +182,22 @@
   margin-bottom: 28px;
   letter-spacing: -1px;
   animation: fadeInUp 1s ease-out 0.3s backwards;
+  color: var(--text-inverse);
 }
 
 .hero-title-highlight {
   display: block;
-  background: linear-gradient(135deg, #10b981, #34d399);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientText 3s ease infinite;
-  text-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+  text-shadow: 0 0 30px var(--overlay-medium);
 }
 
 .hero-title-brilliant {
   display: inline-block;
-  background: linear-gradient(135deg, #34d399, #6ee7b7);
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-400));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -218,7 +211,7 @@
   right: -35px;
   font-size: 1.5rem;
   animation: sparkle 2s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px rgba(110, 231, 183, 0.8));
+  filter: drop-shadow(0 0 10px var(--primary-400));
 }
 
 @keyframes sparkle {
@@ -254,7 +247,7 @@
 }
 
 .hero-subtitle strong {
-  color: #6ee7b7;
+  color: var(--primary-300);
   font-weight: 700;
 }
 
@@ -274,21 +267,21 @@
   align-items: center;
   gap: 10px;
   padding: 16px 36px;
-  background: linear-gradient(135deg, #059669, #10b981);
+  background: var(--btn-primary-bg);
   color: white;
   font-weight: 700;
   font-size: 1.05rem;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 10px 30px var(--overlay-strong);
   transition: all 0.3s ease;
 }
 
 .cta-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.7);
-  background: linear-gradient(135deg, #047857, #059669);
+  box-shadow: 0 15px 40px var(--overlay-strong);
+  background: var(--btn-primary-hover);
 }
 
 .cta-icon {
@@ -306,22 +299,22 @@
   align-items: center;
   gap: 10px;
   padding: 16px 36px;
-  background: rgba(16, 185, 129, 0.15);
+  background: var(--btn-secondary-bg);
   backdrop-filter: blur(10px);
   color: white;
   font-weight: 600;
   font-size: 1.05rem;
-  border: 2px solid rgba(16, 185, 129, 0.4);
+  border: 2px solid var(--border-medium);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .cta-secondary:hover {
-  background: rgba(16, 185, 129, 0.25);
-  border-color: rgba(52, 211, 153, 0.6);
+  background: var(--btn-secondary-hover);
+  border-color: var(--border-strong);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 24px var(--overlay-medium);
 }
 
 .play-icon {
@@ -345,12 +338,12 @@
 .stat-value {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #10b981, #34d399);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 8px;
-  filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.4));
+  filter: drop-shadow(0 0 20px var(--overlay-medium));
 }
 
 .stat-label {
@@ -385,7 +378,7 @@
 .scroll-mouse {
   width: 28px;
   height: 44px;
-  border: 2px solid rgba(16, 185, 129, 0.5);
+  border: 2px solid var(--border-strong);
   border-radius: 20px;
   position: relative;
 }
@@ -393,14 +386,14 @@
 .scroll-wheel {
   width: 4px;
   height: 10px;
-  background: rgba(16, 185, 129, 0.8);
+  background: var(--primary-500);
   border-radius: 4px;
   position: absolute;
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
   animation: scrollWheel 2s ease-in-out infinite;
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  box-shadow: 0 0 8px var(--primary-500);
 }
 
 @keyframes scrollWheel {
@@ -417,10 +410,11 @@
 
 .scroll-text {
   font-size: 0.85rem;
-  color: rgba(110, 231, 183, 0.7);
+  color: var(--primary-300);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  opacity: 0.7;
 }
 
 /* Floating Elements */
@@ -441,7 +435,7 @@
 .shape-1 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #059669, #10b981);
+  background: var(--gradient-secondary);
   top: 10%;
   left: 5%;
   animation-duration: 18s;
@@ -450,7 +444,7 @@
 .shape-2 {
   width: 200px;
   height: 200px;
-  background: linear-gradient(135deg, #10b981, #34d399);
+  background: var(--gradient-primary);
   bottom: 15%;
   right: 10%;
   animation-duration: 22s;
@@ -460,7 +454,7 @@
 .shape-3 {
   width: 150px;
   height: 150px;
-  background: linear-gradient(135deg, #34d399, #6ee7b7);
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-400));
   top: 50%;
   right: 15%;
   animation-duration: 20s;
