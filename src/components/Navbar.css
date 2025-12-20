@@ -42,6 +42,10 @@
   gap: 2rem;
 }
 
+.theme-toggle {
+  margin-left: auto; /* Empujar a la derecha si está antes del menú */
+}
+
 /* Logo */
 .navbar-logo {
   display: flex;
