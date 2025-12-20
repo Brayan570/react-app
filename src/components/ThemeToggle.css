@@ -1,0 +1,108 @@
+/* src/components/ThemeToggle.css */
+
+.theme-toggle {
+  width: 70px;
+  height: 36px;
+  background: var(--bg-card, #ffffff);
+  border: 2px solid var(--border-medium, rgba(16, 185, 129, 0.2));
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm, 0 4px 12px rgba(16, 185, 129, 0.1));
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle:hover {
+  border-color: var(--border-strong, rgba(16, 185, 129, 0.3));
+  box-shadow: var(--shadow-md, 0 10px 30px rgba(16, 185, 129, 0.15));
+  transform: scale(1.05);
+}
+
+.theme-toggle:focus {
+  outline: none;
+  box-shadow: var(--shadow-md, 0 10px 30px rgba(16, 185, 129, 0.15)),
+    0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.theme-toggle-slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 28px;
+  height: 28px;
+  background: var(
+    --gradient-primary,
+    linear-gradient(135deg, #10b981, #34d399)
+  );
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle.dark .theme-toggle-slider {
+  transform: translateX(34px);
+  background: var(
+    --gradient-secondary,
+    linear-gradient(135deg, #059669, #10b981)
+  );
+}
+
+.theme-icon {
+  width: 16px;
+  height: 16px;
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+  transform: rotate(15deg) scale(1.1);
+}
+
+.theme-toggle:active .theme-icon {
+  transform: scale(0.95);
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.theme-toggle {
+  animation: slideIn 0.5s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 60px;
+    height: 32px;
+  }
+
+  .theme-toggle-slider {
+    width: 24px;
+    height: 24px;
+    top: 3px;
+  }
+
+  .theme-toggle.dark .theme-toggle-slider {
+    transform: translateX(28px);
+  }
+
+  .theme-icon {
+    width: 14px;
+    height: 14px;
+  }
+}

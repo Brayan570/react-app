@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import "./Navbar.css";
+import ThemeToggle from "./ThemeToggle";
 import { Helmet } from "react-helmet-async";
 
 export default function Navbar() {
@@ -36,6 +37,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
+        <ThemeToggle />
         {/* Logo */}
         <a href="#inicio" className="navbar-logo">
           <div className="logo-icon">
@@ -65,8 +67,7 @@ export default function Navbar() {
               className="cta-arrow"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -81,8 +82,7 @@ export default function Navbar() {
         <button
           className={`mobile-menu-button ${isMobileMenuOpen ? "active" : ""}`}
           onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-        >
+          aria-label="Toggle menu">
           <span className="menu-line"></span>
           <span className="menu-line"></span>
           <span className="menu-line"></span>
@@ -91,16 +91,14 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`mobile-menu-overlay ${isMobileMenuOpen ? "active" : ""}`}
-      >
+        className={`mobile-menu-overlay ${isMobileMenuOpen ? "active" : ""}`}>
         <ul className="mobile-menu">
           {navLinks.map((link, index) => (
             <li key={index} style={{ animationDelay: `${index * 0.1}s` }}>
               <a
                 href={link.href}
                 className="mobile-nav-link"
-                onClick={closeMobileMenu}
-              >
+                onClick={closeMobileMenu}>
                 {link.label}
               </a>
             </li>
@@ -109,8 +107,7 @@ export default function Navbar() {
             <a
               href="#contacto"
               className="mobile-cta-button"
-              onClick={closeMobileMenu}
-            >
+              onClick={closeMobileMenu}>
               Cotizar Proyecto
             </a>
           </li>
