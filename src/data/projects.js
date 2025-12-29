@@ -19,7 +19,7 @@ const projects = [
     image: "https://iili.io/34xhozb.jpg",
     github: "https://github.com/Brayan570/website",
     demo: "https://brayan570.github.io/website/",
-    tech: ["HTML5", "CSS3", "JAVASCRIPT",],
+    tech: ["HTML5", "CSS3", "JAVASCRIPT"],
   },
   {
     id: 3,
@@ -29,10 +29,10 @@ const projects = [
     image: "https://iili.io/34xhzLx.jpg",
     github: "https://github.com/Brayan570/ecoommerceweb",
     demo: "https://brayan570.github.io/ecoommerceweb/",
-    tech: ["HTML5", "CS3", "JAVASCRIPT", ],
+    tech: ["HTML5", "CS3", "JAVASCRIPT"],
   },
 
-    {
+  {
     id: 3,
     title: "Administración Condominios",
     description:
@@ -40,8 +40,19 @@ const projects = [
     image: "https://iili.io/36fE7at.jpg",
     github: "https://github.com/Brayan570/condominios",
     demo: "",
-    tech: ["PHP", "CSS3", "JAVASCRIPT", "MYSQL", "HTML5", "XAMPP" ],
-  }
+    tech: ["PHP", "CSS3", "JAVASCRIPT", "MYSQL", "HTML5", "XAMPP"],
+  },
+
+  {
+    id: 4,
+    title: "Leidy Animaciones",
+    description:
+      "Proyecto realizado para una empresa de animaciones, con catálogo de servicios y contacto.",
+    image: "https://iili.io/fWew0aR.jpg",
+    github: "",
+    demo: "https://brayan570.github.io/leidy-animaciones/",
+    tech: ["REACT", "CSS3", "JAVASCRIPT", "VITE", "HTML5"],
+  },
 ];
 
 export default projects;
