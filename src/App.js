@@ -9,6 +9,7 @@ import PublicidadDigital from "./components/PublicidadDigital"; // 👈 Importa 
 import Desarrolloweb from "./components/Desarrolloweb";
 import Cursos from "./components/Cursos";
 import Footer from "./components/Footer";
+import CamarasSeguridad from "./components/CamarasSeguridad";
 import "./index.css"; // 👈 No hace falta asignarlo a una variable
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <About />
       <PublicidadDigital /> {/* 👈 Aquí aparece tu sección */}
       <Desarrolloweb />
+      <CamarasSeguridad />
       <Cursos />
       <Contact />
       <Footer />
